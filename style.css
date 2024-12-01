@@ -1520,7 +1520,6 @@ a.btn-link.text-light:after {
   border: 1px solid #999;
 }
 
-/* image zoom */
 .image-zoom {
   position: relative;
   float: left;
@@ -1538,8 +1537,9 @@ a.btn-link.text-light:after {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  transition: transform .3s ease-out;
+  transition: transform 0.3s ease-out;
 }
+
 body {
   background-color: #f8f9fa;
 }
@@ -1554,9 +1554,12 @@ body {
   transform: scale(1.03);
 }
 
+/* Responsive Card Image */
 .card img {
-  height: 250px;
-  object-fit: cover;
+  width: 100%; /* Makes the image take the full width of the card */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image is cropped nicely within the container */
+  border-radius: 5px; /* Optional: Adds rounded corners for a modern look */
 }
 
 .card-title {
